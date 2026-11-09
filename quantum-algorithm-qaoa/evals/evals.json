@@ -1,0 +1,33 @@
+{
+  "skill_name": "quantum-algorithm-qaoa",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a two-node MaxCut QAOA PoC with Cqlib and produce comparable baseline and quantum reports.",
+      "expected_output": "A Cqlib-only implementation plan and artifacts with explicit QUBO, bit order, feasible decoding, and quantum_runtime.",
+      "files": [],
+      "expectations": ["Loads references/cqlib.md only", "Inventories existing Cqlib and project QAOA components before any fallback", "Does not use Qiskit or PennyLane APIs", "Records the v2 quantum_runtime contract"]
+    },
+    {
+      "id": 2,
+      "prompt": "Implement a seeded Qiskit QAOA solution for a tiny portfolio QUBO with top-k feasible decoding.",
+      "expected_output": "A Qiskit-only QAOA workflow with a fair classical baseline and reproducible evidence.",
+      "files": [],
+      "expectations": ["Loads references/qiskit.md only", "Prefers the version-matched Qiskit QAOA and optimization components over a handwritten solver", "Declares bitstring mapping", "Separates original objective from penalty energy"]
+    },
+    {
+      "id": 3,
+      "prompt": "Use PennyLane to create a local-simulator QAOA scheduling demo; do not use cloud hardware.",
+      "expected_output": "A PennyLane-only local implementation with explicit probabilities, decoding, and limitations.",
+      "files": [],
+      "expectations": ["Loads references/pennylane.md only", "Uses qml.qaoa cost and mixer layers when compatible or records why they are unsupported", "Makes no cloud call", "Produces qaoa_model, trace, samples, and quantum report artifacts"]
+    },
+    {
+      "id": 4,
+      "prompt": "使用 QAOA 算法求解图的 Max-Cut 问题，并展示最优划分结果",
+      "expected_output": "A runnable local Qiskit Max-Cut application using the maintained QAOA solver with real API/browser execution and an independent tiny-graph exact reference.",
+      "files": [],
+      "expectations": ["Reuses the maintained Qiskit QAOA solver after checking installed signatures", "Treats declared graphs as optimization instances rather than requiring a downloaded training dataset or QML adapter", "States the graph size and edge-weight input limits in the plan, API, and page", "Verifies all tiny-graph bitstrings against direct cut and QUBO/Ising energy including offset and bit order", "Separates best sampled, most probable, and expected cut values and names the approximation-ratio statistic", "Rejects unsupported empty graphs or reports a truthful trivial result without a fabricated quantum run", "Solves two distinct supported inputs through the real API and browser and recomputes saved JSON result evidence in a fresh process"]
+    }
+  ]
+}

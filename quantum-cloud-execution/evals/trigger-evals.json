@@ -1,0 +1,12 @@
+{
+  "skill_name": "quantum-cloud-execution",
+  "should_trigger": [
+    "Audit why the reserved quantum-cloud-execution skill is inactive.",
+    "Document future activation requirements for the reserved TianYan integration without running it."
+  ],
+  "should_not_trigger": [
+    "Run this circuit on a local statevector simulator.",
+    "Submit this workload to IBM Quantum or another cloud platform.",
+    "Run this circuit on TianYan hardware now."
+  ]
+}

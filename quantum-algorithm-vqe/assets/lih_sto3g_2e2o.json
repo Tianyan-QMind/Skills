@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "instance_id": "lih-upstream-sto3g-nominal-1.6a-cas2e2o-jw",
+  "source_url": "https://raw.githubusercontent.com/qiskit-community/qiskit-nature/5944cdb3b4f6505084a8b24083be9de6a1a1d1fc/test/second_q/formats/fcidump/test_fcidump_lih.fcidump",
+  "source_sha256": "8ff5a3137aa3c46158bdf6fdeac267ac9259f04e324de3c1a612448569305ffe",
+  "source_revision": "5944cdb3b4f6505084a8b24083be9de6a1a1d1fc",
+  "source_test_url": "https://github.com/qiskit-community/qiskit-nature/blob/5944cdb3b4f6505084a8b24083be9de6a1a1d1fc/test/second_q/drivers/test_driver_methods_gsc.py",
+  "source_license": "Apache-2.0; derived from Qiskit Nature's IBM-authored LiH regression fixture",
+  "molecule": "LiH",
+  "basis": "STO-3G",
+  "nominal_bond_length_angstrom": 1.6,
+  "geometry_convention": "Upstream test's nominal geometry; original FCIDUMP nuclear constant retained exactly",
+  "charge": 0,
+  "multiplicity": 1,
+  "num_qubits": 4,
+  "num_particles": [
+    1,
+    1
+  ],
+  "active_orbitals": [
+    1,
+    2
+  ],
+  "inactive_occupied_orbitals": [
+    0
+  ],
+  "excluded_virtual_orbitals": [
+    3,
+    4,
+    5
+  ],
+  "mapping": "JordanWignerMapper; alpha modes 0,1; beta modes 2,3",
+  "pauli_order": "q3 q2 q1 q0; little-endian basis indices",
+  "energy_unit": "hartree",
+  "operator_energy_scope": "active electronic only; excludes both constants",
+  "offsets": {
+    "nuclear_repulsion_energy": 0.9923994679134522,
+    "ActiveSpaceTransformer": -7.7963310314618335
+  },
+  "sector_basis_indices": [
+    5,
+    6,
+    9,
+    10
+  ],
+  "reference_active_energy": -1.058344145215974,
+  "reference_total_energy": -7.862275708764356,
+  "paulis": [
+    [
+      "IIII",
+      -0.7059283642246099
+    ],
+    [
+      "IIIZ",
+      0.15675019826150127
+    ],
+    [
+      "IIZI",
+      -0.014608899539307607
+    ],
+    [
+      "IIZZ",
+      0.0522506221146749
+    ],
+    [
+      "IZII",
+      0.15675019826150127
+    ],
+    [
+      "IZIZ",
+      0.12174230903900893
+    ],
+    [
+      "YYII",
+      -0.014081281916447322
+    ],
+    [
+      "YYIZ",
+      -0.012168298226626092
+    ],
+    [
+      "XXII",
+      -0.014081281916447322
+    ],
+    [
+      "XXIZ",
+      -0.012168298226626092
+    ],
+    [
+      "ZIII",
+      -0.014608899539307607
+    ],
+    [
+      "ZIIZ",
+      0.055519211456360205
+    ],
+    [
+      "IIYY",
+      -0.014081281916447322
+    ],
+    [
+      "IZYY",
+      -0.012168298226626092
+    ],
+    [
+      "IIXX",
+      -0.014081281916447322
+    ],
+    [
+      "IZXX",
+      -0.012168298226626092
+    ],
+    [
+      "YYYY",
+      0.0032685893416853065
+    ],
+    [
+      "XXYY",
+      0.0032685893416853065
+    ],
+    [
+      "YYXX",
+      0.0032685893416853065
+    ],
+    [
+      "XXXX",
+      0.0032685893416853065
+    ],
+    [
+      "ZIYY",
+      0.001913038055330771
+    ],
+    [
+      "ZIXX",
+      0.001913038055330771
+    ],
+    [
+      "IZZI",
+      0.055519211456360205
+    ],
+    [
+      "YYZI",
+      0.001913038055330771
+    ],
+    [
+      "XXZI",
+      0.001913038055330771
+    ],
+    [
+      "ZIZI",
+      0.08436379059914337
+    ],
+    [
+      "ZZII",
+      0.0522506221146749
+    ]
+  ],
+  "generation": {
+    "transformer": "qiskit_nature.second_q.transformers.ActiveSpaceTransformer(2, 2, active_orbitals=[1, 2])",
+    "versions": {
+      "qiskit": "2.5.1",
+      "qiskit-nature": "0.8.0",
+      "numpy": "2.5.1"
+    }
+  },
+  "limitations": [
+    "Fixed upstream LiH instance at nominal 1.6 angstrom; no arbitrary geometry or basis inputs",
+    "CAS(2e,2o) approximation, not full six-orbital LiH or experimental chemical accuracy",
+    "Exact local statevector simulation; no hardware or quantum advantage claim"
+  ]
+}

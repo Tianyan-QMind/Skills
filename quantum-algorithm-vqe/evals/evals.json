@@ -1,0 +1,41 @@
+{
+  "skill_name": "quantum-algorithm-vqe",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use Cqlib to implement VQE for a known two-qubit Pauli Hamiltonian and validate the energy convention.",
+      "expected_output": "A Cqlib-only VQE route with Hamiltonian, ansatz, reference energy, convergence, and runtime evidence.",
+      "files": [],
+      "expectations": ["Loads references/cqlib.md only", "Inventories existing Cqlib and project VQE components before any fallback", "Checks the variational bound", "Records units and wire order"]
+    },
+    {
+      "id": 2,
+      "prompt": "Build the same small VQE application with Qiskit on a local statevector backend.",
+      "expected_output": "A Qiskit-only VQE implementation preserving the framework-neutral Hamiltonian contract.",
+      "files": [],
+      "expectations": ["Loads references/qiskit.md only", "Uses the maintained Qiskit VQE solver and ansatz components when installed", "Uses an independent reference", "Records quantum_runtime"]
+    },
+    {
+      "id": 3,
+      "prompt": "Create a PennyLane VQE PoC for a one-qubit Hamiltonian with an analytic expected energy.",
+      "expected_output": "A PennyLane-only VQE implementation with a deterministic local smoke test.",
+      "files": [],
+      "expectations": ["Loads references/pennylane.md only", "Reuses maintained PennyLane Hamiltonian, ansatz, differentiation, and optimizer components", "Tests a known analytic case", "Does not claim hardware performance"]
+    },
+    {
+      "id": 4,
+      "prompt": "从首页使用 VQE 计算氢化锂基态能量并分析收敛；选择 Qiskit、本地模拟、Web 页面。当前为原生 Windows 且 PySCF 安装失败。",
+      "expected_output": "使用可追溯固定 LiH 积分实例和 maintained Qiskit VQE，明确固定几何及 CAS(2e,2o) 近似；页面运行有界求解并显示真实收敛记录。",
+      "files": [],
+      "expectations": [
+        "Reuses the maintained qiskit_algorithms.VQE and Qiskit Nature UCCSD components",
+        "Never invents LiH integrals or substitutes H2",
+        "Checks the pinned upstream source checksum and fixed geometry/active-space boundary",
+        "Adds inactive and nuclear offsets exactly once",
+        "Compares the final state to an exact reference in the same particle sector",
+        "Reloads JSON parameters without optimizing again",
+        "Distinguishes energy evaluations from optimizer iterations"
+      ]
+    }
+  ]
+}

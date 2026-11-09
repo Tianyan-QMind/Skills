@@ -1,0 +1,11 @@
+{
+  "skill_name": "quantum-algorithm-vqe",
+  "should_trigger": [
+    "Use a Pauli Hamiltonian and variational ansatz to estimate its ground-state energy.",
+    "Validate a molecular VQE result against exact diagonalization."
+  ],
+  "should_not_trigger": [
+    "Build a QUBO model for a scheduling problem.",
+    "Write the final README and handoff notes for an existing application."
+  ]
+}

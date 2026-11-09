@@ -1,0 +1,47 @@
+{
+  "skill_name": "quantum-application-intake",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a MaxCut application, but the SDK, metric, and delivery target are not specified.",
+      "expected_output": "A reviewable contract that separates resolved facts, defaults, and blocking decisions before planning.",
+      "files": [],
+      "expectations": ["Inspects existing context first", "Asks for unresolved SDK and delivery choices during interactive Intake", "Defaults only execution to a local simulator when interactive questioning is unavailable", "Does not claim the QAOA route is validated"]
+    },
+    {
+      "id": 2,
+      "prompt": "Run my existing circuit on TianYan hardware and expose the result in a local demo.",
+      "expected_output": "A clear blocker that hardware execution is outside the current local-only workflow, without collecting credentials.",
+      "files": [],
+      "expectations": ["Reports hardware execution as unsupported in the current workflow", "Never requests credentials in chat", "Does not route quantum-cloud-execution"]
+    },
+    {
+      "id": 3,
+      "prompt": "Use quantum machine learning to predict temperature. Select an appropriate SDK and model for me.",
+      "expected_output": "A QML intent contract that dispatches evidence research without preselecting the implementation route.",
+      "files": [],
+      "expectations": ["Uses selected_sdk null with sdk_selection_source planner_pending", "Does not select an SDK, VQR, encoding, ansatz, optimizer, or backend", "Records unknown dataset provenance as a structured unresolved decision"]
+    },
+    {
+      "id": 4,
+      "prompt": "Build a local FastAPI QML demo, but implementation has not started.",
+      "expected_output": "A minimal intake manifest that records delivery intent without inventing implementation details.",
+      "files": [],
+      "expectations": ["Records application_slug and runnable_app", "Uses onboard as the network source", "Does not invent entrypoints, endpoints, assets, or browser selectors"]
+    },
+    {
+      "id": 5,
+      "prompt": "生成一个金融欺诈检测的量子机器学习算法应用",
+      "expected_output": "An interactive Intake that asks for SDK, execution mode, and delivery form, followed by a reviewable full-delivery contract for the selected Qiskit/local-simulator/Web route.",
+      "files": [],
+      "expectations": [
+        "Asks for SDK, execution mode, and delivery form before scientific preferences when those choices are missing",
+        "Preserves Qiskit as the explicit user-selected SDK",
+        "Records selected_sdk qiskit with sdk_policy user_locked and sdk_selection_source user_selected",
+        "Records execution_mode local_simulator and does not request quantum-cloud credentials",
+        "Records delivery_profile runnable_app with an inference-only Web presentation",
+        "Carries the approved contract through planning, implementation, verification, and browser handoff"
+      ]
+    }
+  ]
+}
